@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Geo-Location
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link href='https://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="innerbox">
+            <h1 class="text-center">GEO<small>location</small></h1>
+            <br>
+            <h3 class="heading">Get your location's coordinates</h3>
+            <hr class="line">
+            <br>
+            <button onclick="getLocation()" class="button btn-primary">CLICK to get location</button>
+            <br>
+            <a class="linki" href="index.html"> <i class="fa fa-repeat active fa-2x "></i></a>
+            <hr>
+            <p id="demo"></p>
+        </div>
+    </div>
+    <script>
+    var x = document.getElementById("demo");
+
+    function showLocation(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        x.innerHTML = "Latitude : " + latitude + " <br>Longitude: " + longitude;
+    }
+
+    function errorHandler(err) {
+        if (err.code == 1) {
+            alert("Error: Access is denied!");
+        } else if (err.code == 2) {
+            alert("Error: Position is unavailable!");
+        }
+    }
+
+
+    document.addEventListener("deviceready", function() {
+        navigator.geolocation.getCurrentPosition(onsuccess, onerror, params);
+    }, false);
+
+
+    function getLocation() {
+
+        if (navigator.geolocation) {
+            // timeout at 60000 milliseconds (60 seconds)
+            var options = {
+                timeout: 60000
+            };
+            navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+        } else {
+            alert("Sorry, browser does not support geolocation!");
+        }
+    }
+    </script>
+</body>
+
+</html>

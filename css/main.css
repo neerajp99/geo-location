@@ -1,0 +1,101 @@
+     html {
+         height: 100%;
+         width: 100%;
+     }
+     
+     .innerbox {
+         margin: 0 auto;
+         background-color: #3498db;
+         padding-top: 10px;
+         box-shadow: 2px 2px 7px #34495e;
+         position: relative;
+         height: 420px;
+     }
+     
+     .text-center {
+         font-family: 'Chelsea Market', cursive;
+         color: #2f4255;
+         position: relative;
+     }
+      .text-center > small {
+         font-family: 'Chelsea Market', cursive;
+         color: #3a5269;
+         position: relative;
+     }
+     .container {
+         max-width: 500px;
+         margin: 50px auto;
+     }
+     
+     .heading {
+         text-align: center;
+         font-family: 'Chelsea Market', cursive;
+         color: #3a5269;
+     }
+     
+     #demo {
+         font-family: 'Chelsea Market', cursive;
+         
+         font-size: 20px;
+         text-align: center;
+         margin: 0 auto;
+         color: #3a5269;
+     }
+     
+     .linki {
+         color: rgba(255, 255, 255, 0.8);
+         text-align: right;
+         padding-right: 10px;
+         font-size: 0.9em;
+         font-weight: bold;
+         padding-left:46%;
+         
+        
+     }
+     
+     .line {
+         max-width: 70%;
+     }
+     
+     .button {
+         border: none;
+         background: transparent;
+         line-height: 1;
+         cursor: pointer;
+         padding: 1.25em 1.75em;
+         color: #fff;
+         border: 1px solid;
+         -webkit-transition: all .3s ease;
+         transition: all .3s ease;
+         display: block;
+         text-align: center;
+         margin: 0 auto;
+         border-radius: 4px;
+
+     }
+     
+     .btn-primary {
+         background: #00bfff;
+         border-color: #00a8e0;
+         font-family: 'Chelsea Market', cursive;
+     }
+     
+     .btn-primary:hover {
+         background: #00a8e0;
+         border-color: #00bfff
+     }
+     
+     .btn-primary:focus,
+     .btn-primary:active {
+         background: #00a8e0;
+     }
+     
+     .innerbox > .list {
+         text-align: center;
+         margin: 20px 215px 10px;
+     }
+     
+     .heading2 {
+         font-weight: bold;
+         font-family: 'Chelsea Market', cursive;
+     }
